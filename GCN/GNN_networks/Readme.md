@@ -83,14 +83,14 @@ Use the backbone that matches the network used during training.
 |   03    | GNN_03.pkl                                            | GNN_networks.GNN_network_03                |
 |   04    | GNN_04.pkl                                            | GNN_networks.GNN_network_04                |
 |   05    | GNN_05.pkl                                            | GNN_networks.GNN_network_05                |
-|   06    | GNN_06.pkl or GNN_0417_gen_0_..._06_1.pkl             | GNN_networks.GNN_network_06                |
+|   06    | GNN_06.pkl                                            | GNN_networks.GNN_network_06                |
 |   07    | GNN_07.pkl                                            | GNN_networks.GNN_network_07                |
 |   08    | GNN_08.pkl                                            | GNN_networks.GNN_network_08                |
 |   09    | GNN_09.pkl                                            | GNN_networks.GNN_network_09                |
 
 Project specific note
-* model9 uses network09
-* model11 uses network06
+* model10 uses network06
+* model11 uses network09
 
 Rule of thumb
 One checkpoint pairs with one backbone. If the pairing is wrong the state dict will not load correctly or the outputs will be inconsistent.
