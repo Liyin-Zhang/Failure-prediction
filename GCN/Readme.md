@@ -120,20 +120,23 @@ Project specific mapping
 
 ## 5) Typical folder layout
 
-GNN_data/
-├─ train/
-│  ├─ train_node_features_subset_obf.csv
-│  └─ train_edge_features_subset_obf.csv
-├─ evaluate/
-│  ├─ evaluate_node_features_subset_obf.csv
-│  └─ evaluate_edge_features_subset_obf.csv
-├─ grid/
-│  ├─ train_topology_oriented_subset_obf.pickle
-│  └─ evaluate_topology_oriented_subset_obf.pickle
-├─ model/
-│  └─ (checkpoints and final models)
-└─ output/
-   └─ (evaluation results)
+#### train
+* `train_node_features_subset_obf.csv`
+* `train_edge_features_subset_obf.csv`
+
+#### evaluate
+* `evaluate_node_features_subset_obf.csv`
+* `evaluate_edge_features_subset_obf.csv`
+
+#### grid
+* `train_topology_oriented_subset_obf.pickle`
+* `evaluate_topology_oriented_subset_obf.pickle`
+
+#### model
+* checkpoints and final models
+
+#### output
+* evaluation results
 
 ============================================================
 
