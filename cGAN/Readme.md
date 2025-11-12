@@ -43,36 +43,45 @@ The function create_graph(csv_path, pickle_path) loads both files and returns a 
 pip install torch torch-geometric pandas numpy matplotlib seaborn
 Make sure PyTorch Geometric matches your CUDA and PyTorch versions
 
-### 2. Train
+## 2. Train
 
-python train_cgan.py \\
-  --data_csv GAN_data/train/test_subset_obf.csv \\
-  --topo_pkl GAN_data/train/topology_subset_obf.pickle \\
-  --model_dir GAN_data/model \\
-  --model_suffix sage \\
-  --epochs 1000 \\
-  --batch_size 400 \\
-  --in_dim 5 \\
-  --hidden_dim 128 \\
-  --lr_g 5e-4 \\
-  --lr_d 5e-4
+* **Command**
+  * `python train_cgan.py`
 
-During training the visualizer shows a 2D scatter preview of real and generated projections for fast sanity checks
+* **Arguments**
+  * `--data_csv`  `GAN_data/train/test_subset_obf.csv`
+  * `--topo_pkl`  `GAN_data/train/topology_subset_obf.pickle`
+  * `--model_dir` `GAN_data/model`
+  * `--model_suffix` `sage`
+  * `--epochs` `1000`
+  * `--batch_size` `400`
+  * `--in_dim` `5`
+  * `--hidden_dim` `128`
+  * `--lr_g` `5e-4`
+  * `--lr_d` `5e-4`
 
-### 3. Evaluate and generate samples
+* **Note**
+  * During training, the visualizer shows a 2D scatter preview of real and generated projections for quick sanity checks.
 
-python evaluate_cgan.py \\
-  --data_csv GAN_data/train/train_0313_1_clustered.csv \\
-  --topo_pkl GAN_data/train/topology_subset_obf.pickle \\
-  --model_path GAN_data/model/cGAN_generator_model_sage.pth \\
-  --output_csv GAN_data/gen_data/cGAN_gen_sage.csv \\
-  --batch_size 1 \\
-  --in_dim 5 \\
-  --hidden_dim 128 \\
-  --feature_cols WIN_extreme,PRE_extreme,PRS_extreme,SHU_extreme,TMP_extreme
 
-The script writes a new CSV where extreme feature columns are replaced by generated values
-Feeder names are duplicated with a G mark to indicate generated copies
+## 3. Evaluate and generate samples
+
+* **Command**
+  * `python evaluate_cgan.py`
+
+* **Arguments**
+  * `--data_csv`   `GAN_data/train/train_0313_1_clustered.csv`
+  * `--topo_pkl`   `GAN_data/train/topology_subset_obf.pickle`
+  * `--model_path` `GAN_data/model/cGAN_generator_model_sage.pth`
+  * `--output_csv` `GAN_data/gen_data/cGAN_gen_sage.csv`
+  * `--batch_size` `1`
+  * `--in_dim` `5`
+  * `--hidden_dim` `128`
+  * `--feature_cols` `WIN_extreme,PRE_extreme,PRS_extreme,SHU_extreme,TMP_extreme`
+
+* **Output**
+  * Writes a CSV where extreme feature columns are replaced by generated values.
+  * Feeder names are duplicated with a “G” mark to indicate generated copies.
 
 ## Arguments
 
