@@ -10,18 +10,18 @@ This repository contains a GNN conditioned cGAN that learns on feeder graphs and
 
 ## Project structure
 
-GAN_dataset.py                 # build PyG graph list from node CSV and topology pickle
-GAN_args.py                    # argument parsers for train and eval
-GAN_train_CGAN.py              # training entry with args
-GAN_evaluate_CGAN.py           # evaluation and sample generation with args
-GAN_networks/
-  GAN_network_cgan_SAGE.py     # SAGE based G and D
-  ...                          # other GNN variants, for example GAT GIN TransformerConv
-GAN_data/
-  train/                       # training CSV and topology pickle
-  model/                       # saved weights and logs
-  gen_data/                    # generated samples
-visualizer.py                  # simple scatter visualizer
+* GAN_dataset.py                # build PyG graph list from node CSV and topology pickle
+* GAN_args.py                   # argument parsers for train and eval
+* GAN_train_CGAN.py             # training entry with args
+* GAN_evaluate_CGAN.py          # evaluation and sample generation with args
+* GAN_networks/                 # model backbones
+  * GAN_network_cgan_SAGE.py    # SAGE based G and D
+  * ...                         # other GNN variants, for example GAT GIN TransformerConv
+* GAN_data/                     # data and outputs
+  * train/                      # training CSV and topology pickle
+  * model/                      # saved weights and logs
+  * gen_data/                   # generated samples
+* visualizer.py                 # simple scatter visualizer
 
 ## Data inputs
 
