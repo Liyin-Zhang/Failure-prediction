@@ -54,7 +54,7 @@ Make sure PyTorch Geometric matches your CUDA and PyTorch versions
   * `--model_dir` `GAN_data/model`
   * `--model_suffix` `sage`
   * `--epochs` `1000`
-  * `--batch_size` `400`
+  * `--batch_size` `100`
   * `--in_dim` `5`
   * `--hidden_dim` `128`
   * `--lr_g` `5e-4`
